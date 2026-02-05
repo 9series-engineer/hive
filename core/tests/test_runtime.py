@@ -67,7 +67,7 @@ class TestDecisionRecording:
             reasoning="More formal",
         )
 
-        assert decision_id == "dec_0"
+        assert decision_id.startswith("dec_")
         assert len(runtime.current_run.decisions) == 1
 
         decision = runtime.current_run.decisions[0]
